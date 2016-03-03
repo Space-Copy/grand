@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title %></title>
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    
+  </head>
+
+  <body class="<%= page_classes %>">
+    
+      <header>
+        <div class="container">
+          <%= image_tag "logo.png" %>
+          <div class="main-contacts">
+            <p>Москва, ул. Муромская д. 1 <%= image_tag "locate.png" %></p>
+            <p>+7 495 <span class="main-phone">784 1416</span><%= image_tag "phone.png" %></p>
+          </div>
+        </div>
+      </header>
+      
+      <div class="main-menu">
+        <div class="container">
+          <ul class="menu">
+            <li>
+              <%= link_to "", '/index.html' %>
+              <%= image_tag "home.png" %>
+            </li>
+            <li>
+              <%= link_to "художественная гимнастика", '#' %>
+            </li>
+            <li>
+              <%= link_to "эстетическая гимнастика", '' %>
+            </li>
+            <li>
+              <%= link_to "хореография", '' %>
+            </li>
+            <li>
+              <%= link_to "постановки", '' %>
+            </li>
+            <li>
+              <%= link_to "тренеры", '' %>
+            </li>
+            <li>
+              <%= link_to "фотогалерея", '' %>
+            </li>
+            <li>
+              <%= link_to "контакты", '' %>
+            </li>
+            <li>
+              <%= link_to "о нас", '' %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      
+    <%= yield %>
+    
+    <footer>
+      <div class="footer-first-col">
+        <%= image_tag "footer-logo.png" %>
+      </div>
+      <div class="footer-first-col">2</div>
+      <div class="footer-first-col">3</div>
+      <div class="footer-first-col">4</div>
+      <div class="footer-first-col">5</div>
+      <div class="footer-first-col">6</div>
+    </footer>
+    
+  </body>
+</html>
