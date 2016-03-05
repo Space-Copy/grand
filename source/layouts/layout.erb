@@ -18,10 +18,12 @@
   <body class="<%= page_classes %>">
     
       <header>
-        <div class="container">
-          <%= image_tag "logo.png" %>
+        <div class="header-container">
+          <a href="../index.html">
+            <%= image_tag "logo.png" %>
+          </a>
           <div class="main-contacts">
-            <p>Москва, ул. Муромская д. 1 <%= image_tag "locate.png" %></p>
+            <p>Москва, ул. Муромская д. 1 <%= image_tag "locate.png"  %></p>
             <p>+7 495 <span class="main-phone">784 1416</span><%= image_tag "phone.png" %></p>
           </div>
         </div>
@@ -31,32 +33,33 @@
         <div class="container">
           <ul class="menu">
             <li>
-              <%= link_to "", '/index.html' %>
-              <%= image_tag "home.png" %>
+              <a href="/index.html">
+                <%= image_tag "home.png" %>
+              </a>
             </li>
             <li>
-              <%= link_to "художественная гимнастика", '#' %>
+              <%= link_to "художественная гимнастика", '/gymnastics.html' %>
             </li>
             <li>
-              <%= link_to "эстетическая гимнастика", '' %>
+              <%= link_to "эстетическая гимнастика", '/aesthetic.html' %>
             </li>
             <li>
-              <%= link_to "хореография", '' %>
+              <%= link_to "хореография", '/choreography.html' %>
             </li>
             <li>
-              <%= link_to "постановки", '' %>
+              <%= link_to "постановки", '/productions.html' %>
             </li>
             <li>
-              <%= link_to "тренеры", '' %>
+              <%= link_to "тренеры", '/trainers.html' %>
             </li>
             <li>
-              <%= link_to "фотогалерея", '' %>
+              <%= link_to "фотогалерея", '/gallery.html' %>
             </li>
             <li>
-              <%= link_to "контакты", '' %>
+              <%= link_to "контакты", '/contacts.html' %>
             </li>
             <li>
-              <%= link_to "о нас", '' %>
+              <%= link_to "о нас", '/about.html' %>
             </li>
           </ul>
         </div>
@@ -66,14 +69,57 @@
     <%= yield %>
     
     <footer>
-      <div class="footer-first-col">
-        <%= image_tag "footer-logo.png" %>
+      <div class="container">
+        <div class="first-footer-column">
+          <a href="../index.html">
+            <%= image_tag "footer-logo.png" %>
+          </a>
+        </div>
+        <div class="second-footer-column">
+          <ul class="footer-menu">
+            <li>
+              <%= link_to "художественная гимнастика", '#' %>
+            </li>
+            <li>
+              <%= link_to "эстетическая гимнастика", '#' %>
+            </li>
+          </ul>
+        </div>
+        <div class="third-footer-column">
+          <ul class="footer-menu">
+            <li>
+              <%= link_to "хореография", '' %>
+            </li>
+            <li>
+              <%= link_to "постановки", '' %>
+            </li>
+          </ul>
+        </div>
+        <div class="fourth-footer-column">
+          <ul class="footer-menu">
+            <li>
+              <%= link_to "тренеры", '' %>
+            </li>
+            <li>
+              <%= link_to "фотогалерея", '' %>
+            </li>
+          </ul>
+        </div>
+        <div class="fifths-footer-column">
+          <ul class="footer-menu">
+            <li>
+              <%= link_to "контакты", '' %>
+            </li>
+            <li>
+              <%= link_to "о нас", '' %>
+            </li>
+          </ul>
+        </div>
+        <div class="sixths-footer-column">
+          <p>+7 495 <span class="main-phone">784 1416</span></p>
+          <p class="gravpix">by <%= link_to "Gravpix", 'http://vk.com/gravpix' %></p>
+        </div>
       </div>
-      <div class="footer-first-col">2</div>
-      <div class="footer-first-col">3</div>
-      <div class="footer-first-col">4</div>
-      <div class="footer-first-col">5</div>
-      <div class="footer-first-col">6</div>
     </footer>
     
   </body>
