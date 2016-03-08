@@ -2,21 +2,16 @@
 @import "normalize";
 
 @font-face {
-  font-family: 'Grotesk';
-  src: url("../fonts/grotesk/amazing-grotesk-regular.eot"),
-       url("../fonts/grotesk/amazing-grotesk-regular.woff"),
-       url("../fonts/grotesk/amazing-grotesk-regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
+  font-family:"Amazing Grotesk";
+  src:url("Amazing_Grotesk_Book.eot?") format("eot"),url("Amazing_Grotesk_Book.woff") format("woff"),url("Amazing_Grotesk_Book.ttf") format("truetype"),url("Amazing_Grotesk_Book.svg#AmazingGrotesk") format("svg");
+  font-weight:normal;
+  font-style:normal;}
+  
 @font-face {
-  font-family: 'Grotesk';
-  src: url("../fonts/grotesk/amazing-grotesk-ultra.eot"),
-       url("../fonts/grotesk/amazing-grotesk-ultra.woff"),
-       url("../fonts/grotesk/amazing-grotesk-ultra.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family:"Amazing Grotesk Ultra";
+  src:url("Amazing_Grotesk_Ultra.eot?") format("eot"),url("Amazing_Grotesk_Ultra.woff") format("woff"),url("Amazing_Grotesk_Ultra.ttf") format("truetype"),url("Amazing_Grotesk_Ultra.svg#AmazingGrotesk-Ultra") format("svg");
+  font-weight:normal;
+  font-style:normal;
 }
 
 $mainblue: #006ce5;
@@ -45,7 +40,7 @@ ul,li, p{
 h1, h2{ 
   line-height: 1em; 
   margin: 0;
-  font-family: 'Grotesk';
+  font-family: "Amazing Grotesk";
 }
 
 .container{
@@ -265,8 +260,13 @@ footer{
 }
 
 .news-date{
-  color: $mainblue;
+  color: $mainred;
   margin-bottom: 10px;
+  font-family: "Amazing Grotesk";
+}
+
+.month{
+  color: $mainblue;
 }
 
 .ribbon-text{
@@ -275,11 +275,25 @@ footer{
 }
 
 .index-about{
+  display: -webkit-flex;
+  display: flex;
+  height: 340px;
   margin-bottom: 10px;
   padding: 35px;
   background: #fff;
   font-size: 16px;
+  p { margin-bottom: 15px;}
 }
+
+.index-about-left,
+.index-about-right{
+  position: relative;
+  width: 50%;
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+}
+
+.index-about-left{ padding-right: 70px; }
 
 .index-about h1{
   font: normal 30px 'Open Sans';
@@ -299,6 +313,10 @@ footer{
 
 .index-about-button{
   display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 -35px -35px 0;
   line-height: 45px;
   width: 160px;
   background: $mainblue;
@@ -332,24 +350,51 @@ footer{
 }
 
 .sections-item{
+  position: relative;
   width: 20%;
+  padding-top: 35px;
   text-align: center;
+  border-right: 1px solid #cdcdcd;
   h1{
+    position: relative;
+    z-index: 3;
     font-size: 24px;
     color: $mainblue;
-    margin: 15px 0;
+    margin: 10px 0;
+  }
+  p {
+    position: relative;
+    z-index: 2;
+    font-family: "Amazing Grotesk";
+  }
+  img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
 }
 
+.sections-container .sections-item:last-child{
+  border: none;
+  padding-top: 52px;
+}
+
 #registration-button{
+  position: absolute;
+  z-index: 2;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -80px;
   height: 30px;
   width: 160px;
-  margin: 0 auto;
   border: 2px solid $mainblue;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  line-height: 26px;
+  line-height: 28px;
+  color: $mainblue;
   cursor: pointer;
 }
 
+#registration-button:hover{ background: $mainblue; color: #fff; }
