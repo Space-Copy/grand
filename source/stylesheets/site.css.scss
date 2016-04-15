@@ -14,6 +14,22 @@
   font-style:normal;
 }
 
+// ======================================== миксин для очистки флоатов
+
+%clearfix {
+   &:after {
+      content: '';
+      display: table;
+      clear: both;
+   }
+}
+
+// .selector  {
+//   @extend %clearfix;
+// }
+
+// end
+
 $mainblue: #006ce5;
 $mainred: #ff4a4a;
 $maingray: #474747;
@@ -26,6 +42,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: $maingray;
+  line-height: 1em;
 }
 
 a{
@@ -47,6 +64,18 @@ h1, h2{
   position: relative;
   width: 1170px;
   margin: 0 auto;
+}
+
+// =========================== Объявление
+
+.ad{
+  line-height: 35px;
+  background: $mainred;
+  text-align: center;
+  color: #fff;
+  span{
+    text-transform: uppercase;
+  }
 }
 
 // =========================== Header
@@ -116,10 +145,36 @@ header{
   color: #fff;
 }
 
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  z-index: 999;
+  display: none;
+  min-width: 94px;
+  text-align: left;
+  padding: 10px 20px;
+  background: $mainred;
+  a {
+    display: block;
+    line-height: 55px;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 // =========================== Footer
 
 footer{
-  height: 120px;
+  height: 135px;
   padding-top: 30px;
   margin-top: 60px;
   background: #fff;
@@ -178,7 +233,6 @@ footer{
   height: 700px;
   width: 100%;
   background: $mainblue url(../images/lenta_plus.png) center no-repeat;
-  // background: $mainblue;
 }
 
 .grand{
@@ -187,12 +241,11 @@ footer{
   background: url(../images/grand.png) center no-repeat;
 }
 
-.grand a{
+.open_modal{
   position: absolute;
   bottom: 100px;
   left: 50%;
   margin-left: -147px;
-  display: block;
   height: 46px;
   width: 295px;
   border: 2px solid white;
@@ -201,9 +254,10 @@ footer{
   font-size: 18px;
   color: #fff;
   text-align: center;
+  cursor: pointer;
 }
 
-.grand a:hover{
+.open_modal:hover{
   background: $mainred;
   border-color: $mainred;
 }
@@ -211,7 +265,7 @@ footer{
 .news{
   height: 290px;
   margin-top: -40px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .news-item{
@@ -278,11 +332,14 @@ footer{
   display: -webkit-flex;
   display: flex;
   height: 340px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   padding: 35px;
   background: #fff;
   font-size: 16px;
-  p { margin-bottom: 15px;}
+  p { 
+    margin-bottom: 15px;
+    line-height: 1.5em;
+  }
 }
 
 .index-about-left,
@@ -375,9 +432,9 @@ footer{
   }
 }
 
-.sections-container .sections-item:last-child{
+.sections-container .sections-item:last-child {
   border: none;
-  padding-top: 52px;
+  padding-top: 50px;
 }
 
 #registration-button{
@@ -396,5 +453,5 @@ footer{
   color: $mainblue;
   cursor: pointer;
 }
-
 #registration-button:hover{ background: $mainblue; color: #fff; }
+

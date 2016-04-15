@@ -4,11 +4,14 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title %></title>
 
     <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag :form %>
     <%= javascript_include_tag :all %>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -16,6 +19,10 @@
   </head>
 
   <body class="<%= page_classes %>">
+    
+      <div class="ad">
+        <p><span>Объявление:</span> занятие 23 октября отменяется.</p>
+      </div>
     
       <header>
         <div class="header-container">
@@ -37,6 +44,14 @@
                 <%= image_tag "home.png" %>
               </a>
             </li>
+            <li class="dropdown">
+              <%= link_to "о нас", '/about.html' %>
+              <div class="dropdown-content">
+                <%= link_to "команда", '/trainers.html' %>
+                <%= link_to "попечительский совет", '/council.html' %>
+                <%= link_to "документы", '/documents.html' %>
+              </div>
+            </li>
             <li>
               <%= link_to "художественная гимнастика", '/gymnastics.html' %>
             </li>
@@ -46,11 +61,11 @@
             <li>
               <%= link_to "хореография", '/choreography.html' %>
             </li>
-            <li>
+            <li class="dropdown">
               <%= link_to "постановки", '/productions.html' %>
-            </li>
-            <li>
-              <%= link_to "тренеры", '/trainers.html' %>
+              <div class="dropdown-content">
+                <%= link_to "стретчинг", '/trainers.html' %>
+              </div>
             </li>
             <li>
               <%= link_to "фотогалерея", '/gallery.html' %>
@@ -58,13 +73,9 @@
             <li>
               <%= link_to "контакты", '/contacts.html' %>
             </li>
-            <li>
-              <%= link_to "о нас", '/about.html' %>
-            </li>
           </ul>
         </div>
       </div>
-      
       
     <%= yield %>
     
@@ -78,40 +89,46 @@
         <div class="second-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "художественная гимнастика", '#' %>
+              <%= link_to "художественная гимнастика", '/gymnastics.html' %>
             </li>
             <li>
-              <%= link_to "эстетическая гимнастика", '#' %>
+              <%= link_to "эстетическая гимнастика", '/aesthetic.html' %>
+            </li>
+            <li>
+              <%= link_to "попечительский совет", '/council.html' %>
             </li>
           </ul>
         </div>
         <div class="third-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "хореография", '' %>
+              <%= link_to "хореография", '/choreography.html' %>
             </li>
             <li>
-              <%= link_to "постановки", '' %>
+              <%= link_to "постановки", '/productions.html' %>
+            </li>
+            <li>
+              <%= link_to "стретчинг", '#' %>
             </li>
           </ul>
         </div>
         <div class="fourth-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "тренеры", '' %>
+              <%= link_to "тренеры", '/trainers.html' %>
             </li>
             <li>
-              <%= link_to "фотогалерея", '' %>
+              <%= link_to "фотогалерея", '/gallery.html' %>
             </li>
           </ul>
         </div>
         <div class="fifths-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "контакты", '' %>
+              <%= link_to "контакты", '/contacts.html' %>
             </li>
             <li>
-              <%= link_to "о нас", '' %>
+              <%= link_to "о нас", '/about.html' %>
             </li>
           </ul>
         </div>

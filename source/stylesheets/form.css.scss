@@ -1,0 +1,172 @@
+$mainblue: #006ce5;
+$mainred: #ff4a4a;
+$maingray: #474747;
+$darkgray: #555555;
+$lightgray: #777777;
+$coldgray: #edf6fe;
+
+// ======================== colors end
+
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 102, 204, 0.5);
+    opacity: 0;
+    z-index: 99999;
+    cursor: default;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.popup, .popup2{
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -515px;
+    z-index: 999999;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 18px;
+    transition: opacity .5s, top .5s;
+}
+
+.form-header{
+    position: relative;
+    height: 150px;
+    padding: 60px 30px 0 30px;
+    background: $mainblue url(../images/faded-ribbon.png);
+    color: #fff;
+    text-transform: uppercase;
+    h1{
+        font-size: 38px;
+        line-height: 1.5em;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+
+.close_modal{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    height: 23px;
+    width: 23px;
+    background: url(../images/close.png) center no-repeat;
+}
+
+.form-hor-line{
+  height: 5px;
+  width: 175px;
+  margin-bottom: 20px;
+  background: $mainred;
+}
+
+.reg-form {
+    padding: 45px;
+    width: 940px;
+    p {
+        display: inline;
+        line-height: 1.5;
+    }
+}
+
+.par{
+    color: $mainred;
+}
+
+.form-row{
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-row .form-item:first-child{
+    flex-basis: 250px;
+    // border: 1px solid red;
+}
+
+.form-item{
+    // border: 1px solid black;
+    width: calc(100% - 250px);
+}
+
+.one-of-3{
+    width: calc(33% - 80px);
+    // border: 1px solid green;
+}
+
+.reg-form input{
+    display: inline-block;
+    line-height: 45px;
+    border-radius: 25px;
+    border: 1px solid #84898b;
+    text-align: center;
+    outline: none;
+}
+
+input:focus {
+    background: #fff;
+    outline: none;
+}
+
+.reg-form input[type="text"] {
+    
+}
+
+.option-list{
+    display: block;
+    float: left;
+    height: 45px;
+    width: 100%;
+    // border-radius: 25px;
+    text-align: center;
+    outline: none;
+    border: 1px solid $mainblue;
+}
+
+// .option-list::-ms-expand {
+//     padding: 2em;
+//     color: red;
+//     background: black;
+// }
+
+.reg-form textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.reg-form textarea:focus{
+    text-align: left;
+    outline: none;
+}
+
+.reg-form input[type="submit"] {
+    display: inline-block;
+    float: none;
+    width: 300px;
+    padding: 0;
+    background: #006ce5;
+    color: #fff;
+    border: none;
+}
+
+.popup .close_modal,
+.popup2 .close_modal  {
+    cursor: pointer;
+}

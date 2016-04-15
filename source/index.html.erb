@@ -5,11 +5,181 @@ title: grand-ck
 <div class="ribbon">
     <div class="container">
         <div class="grand">
-            <a href="#">Заполнить анкету</a>
+            <div class="open_modal">
+                <p>Заполнить анкету</p>
+            </div>
         </div>
     </div>
 </div>
-
+<!--================================================= Form -->
+    <div class="overlay"></div>
+    <div class="popup">
+        
+        <div class="form-header">
+            <div class="close_modal"></div>
+            <div class="form-hor-line"></div>
+            <h2>анкета для заполнения заявки</h2>
+            <h1>в спортивный клуб SC Grand</h1>
+        </div>
+        <form class="reg-form" action="">
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">1.</span> Впишите ФИО ребенка</p>
+            	</div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="ФИО ребенка" name="child-name">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">2.</span> Возраст ребенка</p>
+            	</div>
+            	<div class="form-item">
+            		<input type=date name="child-age">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">3.</span> ФИО мамы</p>
+            	</div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Имя" name="mother-name">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">4.</span> ФИО папы</p>
+            	</div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Имя" name="father-name">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">5.</span> Моб. мамы</p>
+            	</div>
+            	<div class="one-of-3">
+            		<input type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="" placeholder="8 ( ___ ) ___-__-__" name="mother-phone">
+            	</div>
+            	<div class="one-of-3">
+            		<p><span class="par">6.</span> Моб. папы</p>
+            	</div>
+            	<div class="one-of-3">
+            	    <input type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="" placeholder="8 ( ___ ) ___-__-__" name="father-phone">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">7.</span> Домашний адрес</p>
+            	</div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Город / Улица" name="home-adress">
+                    <input type="text" required="" placeholder="Корпус" name="home-adress">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item"></div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Дом" name="home">
+                    <input type="text" required="" placeholder="Кв." name="apartment">
+                    <p><span class="par">8.</span> Дом. номер</p>
+                    <input type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="" placeholder="8 ( ___ ) ___-__-__" name="home-phone">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">9.</span> Свидетельство о рождении</p>
+            	</div>
+            	<div class="one-of-3">
+            		<input type="text" required="" placeholder="Серия" name="birth-s">   
+            	</div>
+            	<div class="one-of-3">
+            	    <input type="text" required="" placeholder="Номер" name="birth-n">
+            	</div>
+            	<div class="one-of-3">
+            	    <input type="text" required="" placeholder="Дата выдачи" name="birth-d">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item"></div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Кем выдан" name="birth-p">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">10.</span> Гражданство</p>
+            	</div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Российская Федерация" name="citizenship">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">11.</span> Разряд (если есть)</p>
+            	</div>
+            	<div class="form-item">
+            		<select name="rank">
+                        <option>1-й спортивный разряд</option>
+                        <option>2-й спортивный разряд</option>
+                        <option>3-й спортивный разряд</option>
+                    </select>
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">12.</span> Учебное заведение</p>
+            	</div>
+            	<div class="one-of-3">
+            		<input type="text" required="" placeholder="школа" name="school">
+            	</div>
+            	<div class="one-of-3">
+            	    <p><span class="par">13.</span> Разряд (если есть)</p>
+            	</div>
+            	<div class="one-of-3">
+            	    <select name="rank">
+                        <option>1-й спортивный разряд</option>
+                        <option>2-й спортивный разряд</option>
+                        <option>3-й спортивный разряд</option>
+                    </select>
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">14.</span> Адрес школы</p>
+            	</div>
+            	<div class="form-item">
+            		<input type="text" required="" placeholder="Город / Улица" name="school-adress">
+                    <input type="text" required="" placeholder="Корпус" name="school-k">
+                    <input type="text" required="" placeholder="Дом" name="school-b">
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">15.</span> Выберите вид спорта</p>
+            	</div>
+            	<div class="form-item">
+            		<select id="select" name="sport" class="option-list">
+                        <option value="Художественная гимнастика">Художественная гимнастика</option>
+                        <option value="Эстетическая гимнастика">Эстетическая гимнастика</option>
+                        <option value="Хореография">Хореография</option>
+                        <option value="Стретчинг">Стретчинг</option>
+                    </select>
+            	</div>
+            </div>
+            <div class="form-row">
+            	<div class="form-item">
+            		<p><span class="par">16.</span> Дополнительная информация</p>
+            	</div>
+            	<div class="form-item">
+            		<textarea name="Additional" placeholder="Ваши ожидания от занятий и тд."></textarea>
+            	</div>
+            </div>
+            <p>Мы свяжемся с вами в ближайшие рабочие сутки, звонки не позже 18.00</p>
+            <input type="submit" class="button" value="Отправить заявку" name="btnsend">
+        </form>
+    </div>
+<!--================================================= Form end -->
 <div class="container">
     <div class="news">
         <div class="news-item">
