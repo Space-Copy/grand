@@ -6,23 +6,23 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title %></title>
 
     <%= stylesheet_link_tag :site %>
-    <%= stylesheet_link_tag :form %>
+    <%= stylesheet_link_tag :page %>
     <%= javascript_include_tag :all %>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
     
   </head>
 
   <body class="<%= page_classes %>">
     
-      <div class="ad">
-        <p><span>Объявление:</span> занятие 23 октября отменяется.</p>
-      </div>
     
       <header>
         <div class="header-container">
@@ -47,29 +47,30 @@
             <li class="dropdown">
               <%= link_to "о нас", '/about.html' %>
               <div class="dropdown-content">
-                <%= link_to "команда", '/trainers.html' %>
-                <%= link_to "попечительский совет", '/council.html' %>
+                <%= link_to "тренеры", '/trainers.html' %>
                 <%= link_to "документы", '/documents.html' %>
+                <!--<%= link_to "расписание", '/documents.html' %>-->
+                <!--<%= link_to "новости", '/news.html' %>-->
               </div>
             </li>
             <li>
-              <%= link_to "художественная гимнастика", '/gymnastics.html' %>
+              <a href="gymnastics.html">художественная гимнастика</a>
             </li>
             <li>
-              <%= link_to "эстетическая гимнастика", '/aesthetic.html' %>
+              <a href="aesthetic.html">эстетическая гимнастика</a>
             </li>
             <li>
-              <%= link_to "хореография", '/choreography.html' %>
-            </li>
-            <li class="dropdown">
-              <%= link_to "постановки", '/productions.html' %>
-              <div class="dropdown-content">
-                <%= link_to "стретчинг", '/trainers.html' %>
-              </div>
+              <%= link_to "постановки", '/direction.html' %>
             </li>
             <li>
-              <%= link_to "фотогалерея", '/gallery.html' %>
+              <%= link_to "стретчинг", '/stretching.html' %>
             </li>
+             <li>
+              <%= link_to "попечительский совет", '/board_of_trustees.html' %>
+            </li>
+            <!--<li>-->
+            <!--  <%= link_to "галерея", '/gallery.html' %>-->
+            <!--</li>-->
             <li>
               <%= link_to "контакты", '/contacts.html' %>
             </li>
@@ -134,7 +135,7 @@
         </div>
         <div class="sixths-footer-column">
           <p>+7 495 <span class="main-phone">784 1416</span></p>
-          <p class="gravpix">by <%= link_to "Gravpix", 'http://vk.com/gravpix' %></p>
+          <p class="gravpix">by <%= link_to "Gravpix", 'http://gravpix.net/', target: "_blank" %></p>
         </div>
       </div>
     </footer>

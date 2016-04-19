@@ -18,3 +18,24 @@ jQuery(document).ready(function($){
 	});
 
 });
+
+// аякс срань
+
+$(function() {
+  
+  $('#contactPageForm form').on('submit', function(e){
+    e.preventDefault();
+    
+    var data = $(this).serialize(),
+        url = $(this).attr('action');
+    
+    $.post(url, data, function(data){
+      alert('Спасибо, ваша заявка принята!');
+    });
+    
+  });
+  
+});
+
+//что же я творю то
+
