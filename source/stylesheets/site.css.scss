@@ -46,7 +46,7 @@
 	font-style: normal;
 }
 
-// ======================================== миксин для очистки флоатов
+// миксин для очистки флоатов
 
 %clearfix {
    &:after {
@@ -56,11 +56,7 @@
    }
 }
 
-// .selector  {
-//   @extend %clearfix;
-// }
-
-// end
+// цвета
 
 $mainblue: #006ce5;
 $mainred: #ff4a4a;
@@ -74,37 +70,32 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: $maingray;
-  line-height: 0em;
-  
 }
 
 a{
   text-decoration: none;
 }
 
-ul,li, p{
+ul,li,p{
   padding: 0;
   margin: 0;
-  line-height: 1.3em;
 }
 
-h1, h2{ 
-  line-height: 1.3em; 
+h1, h2{
   margin: 0;
-  font-family: "Amazing Grotesk";
+  font-family: "Amazing Grotesk", sans-serif;
+  line-height: 1em;
+}
+
+h3{
+  margin: 0;
+  font-weight: normal;
 }
 
 h1 {
-   text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // text-shadow:-2px -2px 2px rgba(255,255,255,0.2), /* наверх и влево */
-  // 0.5px 0.5px 0.5px rgba(255,255,255,0.2), /* вниз и вправо */
-  // 0.5px 0.5px 0.5px rgba(0,0,0,0.7); /* тёмная тень */
-}
-
-img {
-  margin: 0;
 }
 
 .container{
@@ -112,10 +103,6 @@ img {
   width: 1170px;
   margin: 0 auto;
 }
-
-// =========================== Объявление
-
-
 
 // =========================== Header
 
@@ -155,51 +142,70 @@ header{
 // =========================== Menu
 
 .main-menu{
-  height: 90px;
   background-color: $mainred;
 }
 
 .menu{
-  position: relative;
-  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  width: 1170px;
+  height: 90px;
+}
+
+.menu-item{
+  -webkit-align-self: stretch;
+  align-self: stretch;
+  border-right: 1px solid #ee3131;
+  text-align: center;
+  // max-width: 115px;
+  // min-width: 30px;
+}
+
+.menu .menu-item:not(:first-child) {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.menu .menu-item:first-child{
+  width: 75px;
   padding: 0;
-  margin: 0;
+  background: url(../images/home.png) center no-repeat;
   border-left: 1px solid #ee3131;
 }
 
-.menu li{
-  display: table-cell;
-  width: 1%;
-  white-space: nowrap;
-  line-height: 90px;
-  text-align: center;
-  box-shadow: 1px 0 0 rgba(238, 49, 49, 1);
+.menu .menu-item:hover{
+  background-color: #ee3131;
 }
 
-.menu li:hover{
-  background: #ee3131;
+.menu-item a{
+  display: block;
+  width: 100%;
+  height: 65px;
+  padding-top: 25px;
+  color: #fff;
 }
 
-.menu a{
+.menu-item a:visited{
   color: #fff;
 }
 
 .dropdown {
-  display: inline-block;
+  display: block;
   position: relative;
+  width: inherit;
 }
 
 .dropdown-content {
   position: absolute;
   z-index: 999;
   display: none;
-  min-width: 94px;
+  width: 100%;
   text-align: left;
-  padding: 10px 20px;
   background: $mainred;
   a {
     display: block;
-    line-height: 55px;
+    margin: 10px 20px 0 20px;
+    // line-height: 50px;
   }
   a:hover{
     text-decoration: underline;
@@ -207,7 +213,7 @@ header{
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 // =========================== Footer
@@ -254,7 +260,11 @@ footer{
   line-height: 1em;
 }
 
-.footer-menu a{ color: $darkgray; font-weight: normal; }
+.footer-menu a{ 
+  color: $darkgray; 
+  font-weight: normal; 
+}
+
 .footer-menu a:hover{ text-decoration:underline; }
 
 .gravpix{
@@ -289,15 +299,12 @@ footer{
   width: 295px;
   border: 2px solid white;
   border-radius: 23px;
-  line-height: 42px;
   font-size: 18px;
   color: #fff;
   text-align: center;
   cursor: pointer;
-  
-   p { 
-    margin-bottom: 15px;
-    line-height: 2.2em;
+  p{
+    line-height: 42px;
   }
 }
 
@@ -336,14 +343,23 @@ footer{
   margin-bottom: 15px;
 }
 
-.news-item h1{
-  font-size: 28px;
+.news-item a{
+  font: 900 28px "Amazing Grotesk", sans-serif;
   text-transform: uppercase;
+  line-height: 1em;
 }
 
-.news-item h1:after{
+.news-item a:after{
   content: '\00bb';
   margin-left: 10px;
+}
+
+.news-item a:hover{
+  text-decoration: underline;
+}
+
+.news-item a:visited{
+  color: #fff;
 }
 
 .news-item h2{
@@ -360,13 +376,11 @@ footer{
 .news-date{
   color: $mainred;
   margin-bottom: 10px;
-  font-family: 'Amazing Grotesk';
-  font-weight: 600;
+  font-family: "Amazing Grotesk";
 }
 
 .month{
   color: $mainblue;
-  font-family: "Amazing Grotesk";
 }
 
 .ribbon-text{
@@ -377,7 +391,7 @@ footer{
 .index-about{
   display: -webkit-flex;
   display: flex;
-
+  height: 340px;
   margin-bottom: 25px;
   padding: 35px;
   background: #fff;
@@ -401,33 +415,54 @@ footer{
 .index-about h1{
   font: normal 30px 'Open Sans';
   color: $mainred;
+  margin-bottom: 10px;
 }
 
 .index-about h2{
   font: normal 20px 'Open Sans';
-  margin-top: 15px;
 }
 
 .hor-line{
   height: 5px;
   width: 175px;
-  margin: 23px 0;
+  margin: 30px 0;
   background: $mainred;
 }
 
+.corner-button,
 .index-about-button{
   display: block;
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 0 -35px -35px 0;
   line-height: 45px;
-  width: 160px;
+  padding: 0 35px;
   background: $mainblue;
   color: #fff;
   text-align: center;
 }
-.index-about-button:hover{ background: #0057be; }
+
+.index-about-button{
+  margin: 0 -35px -35px 0;
+}
+
+.corner-registration-button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  line-height: 45px;
+  padding: 0 35px;
+  background: $mainblue;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.corner-button:hover,
+.index-about-button:hover,
+.corner-registration-button:hover{ 
+  background: #0057be;
+}
 
 .sections-title{
   height: 180px;
@@ -465,12 +500,11 @@ footer{
     font-size: 24px;
     color: $mainblue;
     margin: 10px 0;
-    font-family: "Amazing Grotesk";
-    text-transform: uppercase;
   }
   p {
     position: relative;
     z-index: 2;
+    font-family: "Amazing Grotesk";
   }
   img{
     position: absolute;
@@ -485,7 +519,7 @@ footer{
   padding-top: 50px;
 }
 
-#registration-button{
+.registration-button{
   position: absolute;
   z-index: 2;
   bottom: 10%;
@@ -501,228 +535,5 @@ footer{
   color: $mainblue;
   cursor: pointer;
 }
-#registration-button:hover{ background: $mainblue; color: #fff; }
 
-// ==================================================== BIG BANG shit-code of Copy
-
-.sections-title-cource{
-  padding: 20px 70px 0 70px;
-  color: #fff;
-  margin-top: 25px;
-  
-}
-
- .title-cource-png{
-  background: $mainblue url(../images/007.png) no-repeat;
- }
-
- .title-cource-png-two{
-  background: $mainblue url(../images/006.png) no-repeat;
- }
- 
- .title-cource-png-three{
-  background: $mainblue url(../images/008.jpg) no-repeat;
-  height: 143px;
- }
- 
-.sections-title-cource h1{
-  font-size: 57px;
-  font-family: "Amazing Grotesk";
-  text-transform: uppercase;
-  line-height: 1.5;
-  
-}
-
-.sections-title-cource h2{
-  font-size: 48px;
-  font-family: "Amazing Grotesk";
-  text-transform: uppercase;
-}
-
-.sections-title-schedule{
-  height: 50px;
-  padding: 20px 0 0 0px;
-  color: #fff;
-  background-color: $mainblue;
-}
-
-.sections-title-schedule h1{
-  font-family: "Amazing Grotesk";
-  text-transform: uppercase;
-  text-align: center;
-  
-}
-
-.title-schedule {
-   font-size: 28px;
-}
-
-.sections-title-schedule-red{
-  padding: 20px 0 15px 0px;
-  color: #fff;
-  background-color: $mainred;
-}
-
-.course-item{
-  display: -webkit-flex;
-  display: flex;
-  background: #fff;
-  color: $lightgray;
-  margin-top: 25px;
-}
-
-.sections-course{
-  position: relative;
-  width: 50%;
-
-  img{
-    position: static;
-    width: 100%;
-  }
-}
-
-.blue-h1 h1{
-    bottom:0;
-    font-family: "Amazing Grotesk";
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-  }
-
-.course-about{
-  margin-bottom: 25px;
-  padding: 15px 30px 0 50px;
-  font-size: 16px;
-  p { 
-    margin-top: 15px;
-    line-height: 1.5em;
-  }
-}
-
-.course-about h1{
-  font: normal 30px 'Open Sans';
-  color: $darkgray;
-}
-
-.course-about h2{
-  font: normal 20px 'Open Sans';
-  margin: 15px 0 15px 0px;
-}
-
-// ==================================================== sovet
-
-.sovet-item{
-  display: -webkit-flex;
-  display: flex;
-  color: $lightgray;
-  margin-top: 25px;
-}
-
-.foto-sovet{
-  position: relative;
-  width: 20%;
-
-  img{
-    width: 100%;
-  }
-}
-
-.sections-sovet {
-   background: #fff;
-   margin-left: 25px;
-}
-
-.sovet-about{
-  padding: 15px 30px 20px 70px;
-  background: #fff;
-  font-size: 16px;
-  width: 80%;
-  p { 
-    margin-top: 15px;
-    line-height: 1.5em;
-  }
-}
-
-.sovet-about h1{
-  font: normal 30px 'Open Sans';
-  color: $darkgray;
-}
-
-.sovet-about h2{
-  font: normal 20px 'Open Sans';
-  margin-top: 15px;
-}
-
-.title-sovet {
-   font-size: 16px;
-   line-height: 1.2;
-   padding: 15px 0 5px 0px;
-}
-
-// ==================================================== document
-
-.document {
-  display: -webkit-flex;
-  display: flex;
-  padding: 35px;
-  background: #fff;
-  position: relative;
-  
-  img {
-    padding: 0px 52px 0 0px;;
-  }
-}
-
-.regulations {
-  padding: 35px;
-  background: #fff;
-  margin-top: 25px;
-}
-
-// ==================================================== WHAT THE FUCK THIS BUTTON ?
-
-.document-button{
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  line-height: 45px;
-  background: $mainblue;
-  color: #fff;
-  text-align: center;
-  padding: 0px 20px 0 20px;
-}
-.document-button:hover{ background: #0057be; }
-
-// ==================================================== trainers
-
-.photo-trainers{
-  position: relative;
-  width: 38%;
-
-  img{
-    width: 100%;
-    border-radius: 20em;
-    box-shadow: 0 0 0 1px $lightgray;
-  }
-}
-
-.trainers-about{
-  padding: 15px 30px 0 70px;
-  background: #fff;
-  font-size: 16px;
-  width: 62%;
-  p { 
-    margin-top: 15px;
-    line-height: 1.5em;
-  }
-}
-
-.sections-title-trainers{
-  padding: 20px 0 20px 0px;
-  color: #fff;
-  background-color: $mainblue;
-  margin-top: 25px;
-  line-height: 1.3;
-  font-size: 22px;
-}
+.registration-button:hover{ background: $mainblue; color: #fff; }

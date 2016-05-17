@@ -5,18 +5,155 @@ $darkgray: #555555;
 $lightgray: #777777;
 $coldgray: #edf6fe;
 
+// standart page style
+
+.standart-page-title{
+    height: auto;
+    margin-top: 30px;
+    padding: 10px 45px 40px 45px;
+    background: $mainblue url(../images/pattern.png);
+    color: #fff;
+    h1{
+        width: 50%;
+        font-size: 48px;
+        text-transform: uppercase;
+    }
+}
+
+.unnamed{
+    padding: 25px;
+    background: $mainblue;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.standart-page-item{
+    display: -webkit-flex;
+    display: flex;
+    min-height: 405px;
+    margin-top: 25px;
+    background: #fff;
+    font-size: 16px;
+}
+
+.standart-page-item-left,
+.standart-page-item-right{
+  position: relative;
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+}
+
+.standart-page-item-left{
+    width: 570px;
+    overflow: hidden;
+    height: inherit;
+}
+
+.standart-page-item-left img{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+}
+
+.standart-page-item-title,
+.standart-page-item-title-red{
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    padding: 25px 0;
+    color: #fff;
+    text-align: center;
+    h1{
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+}
+
+.standart-page-item-title{background: $mainblue;}
+.standart-page-item-title-red{background: $mainred;}
+
+.standart-page-item-right{
+    width: 600px;
+    padding: 30px 40px;
+    h3{
+        font-size: 30px;
+        margin-bottom: 15px;
+        line-height: 1.2em;
+    }
+}
+
+.standart-page-item-overlay{
+    display: none;
+}
+
+.standart-page-item:hover .standart-page-item-overlay{
+    display: block;
+    position: relative;
+    z-index: 3;
+    height: 355px;
+    background-color: rgba(0, 102, 204, 0.5);
+    text-align: center;
+}
+
+.standart-page-reg-button{
+    display: inline-block;
+    position: relative;
+    top: 40%;
+    width: 240px;
+    height: 50px;
+    line-height: 48px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.standart-page-reg-button:hover{
+    background: #fff;
+    color: $mainblue;
+}
+
+// Типа стандартный текстовый блок, но может быть в будущем он изменится
+
+.standart-page-content{
+    background: #fff;
+    padding: 45px 45px 65px 45px;
+    font-size: 18px;
+    
+    h1{
+        font: normal 30px 'Open Sans';
+        color: $mainred;
+        margin-bottom: 15px;
+        line-height: 1em;
+    }
+    
+    ul{
+        margin-left: 20px;
+        li{
+            margin-bottom: 10px;
+        }
+    }
+}
+
 // contacts
 
 .contact-page{
     display: -webkit-flex;
     display: flex;
+    margin-bottom: 30px;
     padding: 40px;
     background: #fff;
     font-size: 26px;
     
     h3{
         margin-top: 120px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         font-weight: normal;
         color: $mainblue;
     }
@@ -24,7 +161,6 @@ $coldgray: #edf6fe;
 
 .contact-page-left{
     width: 430px;
-    // border: 1px solid black;
     
     img{
         float: left;
@@ -37,7 +173,7 @@ $coldgray: #edf6fe;
     border: 1px solid white;
     
     p{
-        margin-top: 7px;
+        margin-top: 6px;
     }
 }
 
@@ -50,20 +186,18 @@ $coldgray: #edf6fe;
 .contact-page-right{
     -webkit-flex: 1 auto;
     flex: 1 auto;
-    // border: 1px solid green;
 }
 
 .vk-link{
-    display: block;
-    float: left;
+    display: inline-block;
     height: 43px;
     width: 43px;
     background: url(../images/011.png);
 }
 
 .insta-link{
-    display: block;
-    margin-left: 70px;
+    display: inline-block;
+    margin-left: 20px;
     height: 43px;
     width: 43px;
     background: url(../images/012.png);
@@ -72,8 +206,6 @@ $coldgray: #edf6fe;
 .vk-link:hover, .insta-link:hover{
     background-position: bottom;
 }
-
-// contacts end 
 
 .contact-page-form{
     font-size: 18px;
@@ -85,7 +217,7 @@ $coldgray: #edf6fe;
     height: 45px;
     margin-bottom: 25px;
     border-radius: 25px;
-    border: 1px solid #cdcdcd;
+    border: 2px solid #cdcdcd;
     padding-left: 45px;
     outline: none;
 }
@@ -93,6 +225,10 @@ $coldgray: #edf6fe;
 .contact-page-form input[type="textarea"]{
     resize: none;
     height: 130px;
+}
+
+.contact-page-form input[type="textarea"]:focus{
+    overflow: scroll;
 }
 
 .contact-page-form input[type="submit"]{
@@ -106,217 +242,205 @@ $coldgray: #edf6fe;
 
 .contact-page-form input[type="submit"]:hover{
     background: #0057be;    
+} 
+
+// location
+
+.location-first-col{
+    float: right;
+}
+
+.location-second-col{
+    
+}
+
+.location{
+    width: 460px;
+    margin-bottom: 30px;
+    padding: 55px;
+    background: #fff;
+    
+    h1{
+        color: $mainblue;
+    }
+    h2{
+        font: bold 20px 'Open Sans';
+        margin: 10px 0;
+    }
+}
+
+// maps
+
+
+// попечительский совет
+
+.trustee{
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 30px;
+}
+
+.trustee-img-holder{
+    width: 270px;
+    height: 363px;
+    margin-right: 30px;
+    h1{
+        display: inline-block;
+        margin-top: -4px;
+        background: $mainblue;
+        height: 45px;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+.trustee-info,
+.coach-info{
+    -webkit-box-flex: 1 auto;
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
+    padding: 40px 70px;
+    background: #fff;
+    // font-size: 20px;
+    h1{
+        font: normal 30px 'Open Sans';
+        line-height: 1.2em;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+}
+
+.trustee-info{
+    font-size: 20px;
+}
+
+.coach-info{
+    font-size: 16px;
+}
+
+// тренеры
+
+.coach{
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    margin-top: 30px;
+}
+
+.coach-img-holder{
+    width: 370px;
+    margin-right: 30px;
+    h1{
+        display: inline-block;
+        width: 300px;
+        margin-top: 20px;
+        background: $mainblue;
+        padding: 15px 35px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    img{
+        border-radius: 50%;
+        width: 370px;
+    }
+}
+
+// documents
+
+.documents-img-container{
+    position: relative;
+    margin-bottom: 30px;
+    padding: 40px 0 40px 40px;
+    background: #fff;
+}
+
+.documents-img-container img:not(:last-child){
+    margin-right: 40px;
+}
+
+.documents-text{
+    height: 130px;
+    padding: 40px;
+    background: #fff;
+    font-size: 20px;
+    h1{
+        font: normal 30px 'Open Sans';
+        margin-bottom: 10px;
+    }
+}
+
+.smallsizeimg {
+  
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  
+  height:470px;
+  left:-20px;
+  position:relative;
+  
+}
+
+.check:checked+img {
+//   position: absolute;
+  height:1000px;
 }
 
 
-// таки копи
+// новости
 
-// ==================================================== text
-
-.contact-item{
-  display: -webkit-flex;
-  display: flex;
-  color: $lightgray;
-  margin-top: 25px;
+.news-page-item{
+    display: flex;
+    display: -webkit-flex;
+    position: relative;
+    margin-top: 30px;
+    background: #fff;
 }
 
-.sections-contact {
-   background: #fff;
-   margin-left: 25px;
-}
-
-.sections-contact-left {
-   background: #fff;
-}
-
-.contact-about{
-  padding: 60px 30px 60px 90px;
-  background: #fff;
-  font-size: 16px;
-  width: 80%;
-  p { 
-    margin-top: 15px;
-    line-height: 0.8em;
-  }
-}
-
-.contact-about h1{
-  font-family: "Amazing Grotesk";
-  color: $mainblue;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.contact-about h2{
-  font: bold 20px 'Open Sans';
-  margin-top: 15px;
-  color: $darkgray;
-}
-
-.title-contact {
-   font-size: 16px;
-   line-height: 1.1;
-   padding: 15px 0 5px 0px;
-}
-
-// ==================================================== maps
-
-.map-item{
-  display: -webkit-flex;
-  display: flex;
-  margin-top: 25px;
-}
-
-.sections-map {
-   margin-left: 25px;
-}
-
-.sections-map-left {
-   
-}
-
-.map-about{
-  font-size: 16px;
-  width: 50%;
-}
-
-
-//ffffff////
-
-/* Базовые стили слоя затемнения и модального окна  */
-.overlay {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    display: none;
-/* фон затемнения */
-    background-color: rgba(0, 0, 0, 0.65);
-    position: fixed; /* фиксированное поцизионирование */
-    cursor: default; /* тип курсара */
-}
-/* активируем слой затемнения */
-.overlay:target {
-    display: block;
-}
-/* стили модального окна */
-.popup {
-    top: -100%;
-    right: 0;
-    left: 50%;
-    font-size: 14px;
-    z-index: 20;
-    margin: 0;
-    width: 85%;
-    min-width: 320px;
-    max-width: 600px;
-/* фиксированное позиционирование, окно стабильно при прокрутке */
-    position: fixed;
-    padding: 15px;
-    border: 1px solid #383838;
-    background: #fefefe;
-
-/* внешняя тень */
-    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -webkit-transform: translate(-50%, -500%);
-    -ms-transform: translate(-50%, -500%);
-    -o-transform: translate(-50%, -500%);
-    transform: translate(-50%, -500%);
-    -webkit-transition: -webkit-transform 0.6s ease-out;
-    -moz-transition: -moz-transform 0.6s ease-out;
-    -o-transition: -o-transform 0.6s ease-out;
-    transition: transform 0.6s ease-out;
-}
-/* активируем модальный блок */
-.overlay:target+.popup {
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    top: 20%;
-}
-/* формируем кнопку закрытия */
-.close {
-    top: -10px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    padding: 0;
-    border: 2px solid #ccc;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
-    background-color: rgba(61, 61, 61, 0.8);
-    -webkit-box-shadow: 0px 0px 10px #000;
-    -moz-box-shadow: 0px 0px 10px #000;
-    box-shadow: 0px 0px 10px #000;
+.news-icon-holder{
+    position: relative;
+    width: 85px;
+    height: inherit;
     text-align: center;
-    text-decoration: none;
-    font: 13px/20px 'Tahoma', Arial, sans-serif;
-    font-weight: bold;
-    -webkit-transition: all ease .8s;
-    -moz-transition: all ease .8s;
-    -ms-transition: all ease .8s;
-    -o-transition: all ease .8s;
-    transition: all ease .8s;
-}
-.close:before {
-    color: rgba(255, 255, 255, 0.9);
-    content: "X";
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
-    font-size: 12px;
-}
-.close:hover {
-    background-color: rgba(252, 20, 0, 0.8);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);    
-}
-/* элементы м-медиа, фреймы */
-.popup embed, 
-.popup iframe {
-    top: 0;
-    right: 0;
-    bottom: 0; 
-    left: 0; 
-    display:block;
-    margin: auto;
-    min-width: 320px;
-    max-width: 600px;
-    width: 100%;
-}
-.popup h2 { /* заголовок 2 */
-    margin: 0;
-    color: #008000;
-    padding: 5px 0px 10px;
-    text-align: left;
-    text-shadow: 1px 1px 3px #adadad;
-    font-weight: 500;
-    font-size: 1.4em;
-    font-family: 'Tahoma', Arial, sans-serif;
-    line-height: 1.3;
+    background: $mainblue;
+    img{
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        left: 13px;
+    }
 }
 
-.enroll-button{
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0 -35px -35px 0;
-  line-height: 45px;
-  width: 200px;
-  background: $mainblue;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
+.news-image-holder{
+    position: relative;
+    width: 425px;
+    overflow: hidden;
+    height: inherit;
 }
-.enroll-button:hover{ background: #0057be; }
+
+.news-image-holder img{
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.news-content{
+    padding: 30px 40px;
+    font-size: 20px;
+    
+    h1{
+        font: normal 30px 'Open Sans';
+        margin-bottom: 15px;
+        line-height: 1em;
+    }
+    
+    span{
+        font-size: 30px;
+        color: $mainred;
+    }
+}

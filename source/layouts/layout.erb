@@ -3,8 +3,8 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-    
+    <meta name="viewport" content="width=1200">
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -14,6 +14,7 @@
 
     <%= stylesheet_link_tag :site %>
     <%= stylesheet_link_tag :page %>
+    <%= stylesheet_link_tag :form %>
     <%= javascript_include_tag :all %>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -38,45 +39,137 @@
       
       <div class="main-menu">
         <div class="container">
-          <ul class="menu">
-            <li>
-              <a href="/index.html">
-                <%= image_tag "home.png" %>
-              </a>
-            </li>
-            <li class="dropdown">
-              <%= link_to "о нас", '/about.html' %>
+          <div class="menu">
+            <div class="menu-item">
+              <a href="index.html"></a>
+            </div>
+            <div class="menu-item dropdown">
+              <a href="about.html">О нас</a>
               <div class="dropdown-content">
                 <%= link_to "тренеры", '/trainers.html' %>
                 <%= link_to "документы", '/documents.html' %>
-                <!--<%= link_to "расписание", '/documents.html' %>-->
-                <!--<%= link_to "новости", '/news.html' %>-->
               </div>
-            </li>
-            <li>
-              <a href="gymnastics.html">художественная гимнастика</a>
-            </li>
-            <li>
-              <a href="aesthetic.html">эстетическая гимнастика</a>
-            </li>
-            <li>
-              <%= link_to "постановки", '/direction.html' %>
-            </li>
-            <li>
-              <%= link_to "стретчинг", '/stretching.html' %>
-            </li>
-             <li>
-              <%= link_to "попечительский совет", '/board_of_trustees.html' %>
-            </li>
-            <!--<li>-->
-            <!--  <%= link_to "галерея", '/gallery.html' %>-->
-            <!--</li>-->
-            <li>
-              <%= link_to "контакты", '/contacts.html' %>
-            </li>
-          </ul>
+            </div>
+            <div class="menu-item">
+              <%= link_to "Художественная гимнастика", '/gymnastics.html' %>
+            </div>
+            <div class="menu-item">
+              <%= link_to "Эстетическая гимнастика", '/aesthetic.html' %>
+            </div>
+            <div class="menu-item">
+              <%= link_to "Постановки", '/direction.html' %>
+            </div>
+            <div class="menu-item">
+              <%= link_to "Стретчинг", '/stretching.html' %>
+            </div>
+            <div class="menu-item">
+              <%= link_to "Попечительский совет", '/trustees.html' %>
+            </div>
+            <div class="menu-item">
+              <%= link_to "Контакты", '/contacts.html' %>
+            </div>
+          </div>
         </div>
       </div>
+      
+<!--================================================= Form -->
+
+      <div class="overlay"></div>
+      <div class="form-wrapper">
+        <div class="popup">
+            <div class="form-header">
+                <div class="close_modal"></div>
+                <div class="form-hor-line"></div>
+                <h2>анкета для заполнения заявки</h2>
+                <h1>в спортивный клуб SC Grand</h1>
+            </div>
+            <form class="reg-form" action="">
+                <div class="form-row">
+                	<div class="form-item">
+                		<p><span class="par">1.</span> Впишите ФИО ребёнка</p>
+                	</div>
+                	<div class="form-item">
+                		<input type="text" placeholder="ФИО ребёнка" name="childname">
+                	</div>
+                </div>
+                <div class="form-row">
+                	<div class="form-item">
+                		<p><span class="par">2.</span> Возраст ребёнка</p>
+                	</div>
+                	<div class="form-item">
+                		<input type=birthday placeholder="дд.мм.гггг" name="birthday">
+                	</div>
+                </div>
+                <div class="form-row">
+                	<div class="form-item">
+                		<p><span class="par">3.</span> ФИО контактного лица (мама, папа)</p>
+                	</div>
+                	<div class="form-item">
+                		<input type="text" placeholder="ФИО родителя" name="parentname">
+                	</div>
+                </div>
+                <div class="form-row">
+                	<div class="form-item">
+                		<p><span class="par">4.</span> Моб. телефон</p>
+                	</div>
+                	<div class="form-item">
+                		<input type="tel" pattern="" placeholder="+7 945 5555555" name="phone">
+                	</div>
+                </div>
+                <div class="form-row">
+                	<div class="form-item">
+                	    <p><span class="par">5.</span> Разряд (если есть)</p>
+                	</div>
+                	<div class="form-item">
+              	    <select class="option-list" name="rank">
+              	        <option value="Нет разряда">Нет разряда</option>
+                        <option value="1-й разряд">1-й спортивный разряд</option>
+                        <option value="2-й разряд">2-й спортивный разряд</option>
+                        <option value="3-й разряд">3-й спортивный разряд</option>
+                      </select>
+                	</div>
+                </div>
+                <div class="form-row">
+                	<div class="form-item">
+                		<p><span class="par">6.</span> Выберите вид спорта</p>
+                	</div>
+                	<div class="form-item">
+                		<select id="select" class="option-list" name="sport">
+                      <option value="Художественная гимнастика">Художественная гимнастика</option>
+                      <option value="Эстетическая гимнастика">Эстетическая гимнастика</option>
+                      <option value="Хореография">Хореография</option>
+                      <option value="Стретчинг">Стретчинг</option>
+                    </select>
+                	</div>
+                </div>
+                <div class="form-row">
+                	<div class="form-item">
+                		<p><span class="par">7.</span> Дополнительная информация</p>
+                	</div>
+                	<div class="form-item">
+                		<textarea placeholder="Ваши ожидания от занятий и тд." name="additional"></textarea>
+                	</div>
+                </div>
+                <div class="form-row">
+                    <p>Мы свяжемся с вами в ближайшие рабочие сутки, звонки не позже 18.00</p>
+                    <input type="submit" class="" value="Отправить заявку" disabled="disabled" name="btnsend">
+                </div>
+            </form>
+        </div>
+        <div class="popup2">
+            <div class="form-header">
+                <div class="close_modal"></div>
+                <div class="form-hor-line"></div>
+                <h2>анкета для заполнения заявки</h2>
+                <h1>в спортивный клуб SC Grand</h1>
+            </div>
+            <div class="popup2message">
+                <p>Спасибо, ваша заявка принята!</p>
+            </div>
+        </div>
+      </div>
+
+<!--================================================= Form end -->
       
     <%= yield %>
     
@@ -103,7 +196,7 @@
         <div class="third-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "хореография", '/choreography.html' %>
+              <%= link_to "новости", '/news.html' %>
             </li>
             <li>
               <%= link_to "постановки", '/productions.html' %>
