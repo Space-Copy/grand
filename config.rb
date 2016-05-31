@@ -21,6 +21,9 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  
+  activate :autoprefixer
+  
 end
 
 ###
@@ -39,6 +42,7 @@ configure :build do
   
   activate :relative_assets
   
+  activate :autoprefixer
   
   # Minify CSS on build
   # activate :minify_css

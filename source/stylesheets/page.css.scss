@@ -30,6 +30,7 @@ $coldgray: #edf6fe;
 }
 
 .standart-page-item{
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     min-height: 405px;
@@ -83,6 +84,9 @@ $coldgray: #edf6fe;
         font-size: 30px;
         margin-bottom: 15px;
         line-height: 1.2em;
+    }
+    p{
+        line-height: 1.5em;
     }
 }
 
@@ -144,6 +148,7 @@ $coldgray: #edf6fe;
 // contacts
 
 .contact-page{
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     margin-bottom: 30px;
@@ -184,6 +189,7 @@ $coldgray: #edf6fe;
    }
 
 .contact-page-right{
+    -webkit-box-flex: 1 auto;
     -webkit-flex: 1 auto;
     flex: 1 auto;
 }
@@ -275,8 +281,9 @@ $coldgray: #edf6fe;
 // попечительский совет
 
 .trustee{
-    display: -webkit-flex;
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     margin-top: 30px;
 }
 
@@ -304,13 +311,14 @@ $coldgray: #edf6fe;
     flex: 1 auto;
     padding: 40px 70px;
     background: #fff;
-    // font-size: 20px;
     h1{
         font: normal 30px 'Open Sans';
-        line-height: 1.2em;
+        line-height: 1.3em;
     }
     p{
         margin-bottom: 15px;
+        color: #777777;
+        line-height: 1.6em;
     }
 }
 
@@ -325,9 +333,9 @@ $coldgray: #edf6fe;
 // тренеры
 
 .coach{
-    display: -webkit-flex;
-    display: -webkit-box;
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     margin-top: 30px;
 }
 
@@ -396,6 +404,7 @@ $coldgray: #edf6fe;
 
 .news-page-item{
     display: flex;
+    display: -ms-flexbox;
     display: -webkit-flex;
     position: relative;
     margin-top: 30px;
@@ -403,22 +412,30 @@ $coldgray: #edf6fe;
 }
 
 .news-icon-holder{
-    position: relative;
-    width: 85px;
-    height: inherit;
+    flex-shrink: 0;
+    width: 65px;
     text-align: center;
-    background: $mainblue;
+    background: $mainblue; 
     img{
         position: absolute;
         top: 50%;
+        left: 10px;
         margin-top: -25px;
-        left: 13px;
     }
 }
 
+.news-data-holder{
+        color: #ffffff;
+        font: bold 14px 'Open Sans';
+        margin-top: 15px;
+        text-transform: uppercase;
+        padding: 0 10px;
+}
+
 .news-image-holder{
+    flex-shrink: 0;
     position: relative;
-    width: 425px;
+    width: 360px;
     overflow: hidden;
     height: inherit;
 }
@@ -430,17 +447,121 @@ $coldgray: #edf6fe;
 }
 
 .news-content{
+    // width: 80%;
     padding: 30px 40px;
-    font-size: 20px;
+    line-height: 1.5em;
     
     h1{
-        font: normal 30px 'Open Sans';
+        font: normal 26px 'Open Sans';
         margin-bottom: 15px;
         line-height: 1em;
     }
     
     span{
-        font-size: 30px;
-        color: $mainred;
+        font-size: 16px;
+        color: $mainblue;
     }
+}
+
+.news-banner {
+    margin-top: 25px;
+    padding: 18px;
+    background-color: #fff;
+}
+
+.course-about {
+    padding: 15px;
+    p{
+     margin: 15px 15px 0 0px;
+    }
+    h2{
+     margin: 15px 15px 0 0px; 
+     font: normal 30px 'Open Sans';
+     line-height: 1.2em;
+    }
+}
+
+.sections-course{
+    background-color: #ff;
+    padding: 30px 40px;
+    h3{
+        font-size: 30px;
+        margin-bottom: 15px;
+        line-height: 1.2em;
+    }
+    p{
+        line-height: 1.5em;
+    }
+}
+
+.about-img{
+    margin-top: 25px;
+}
+
+// расписание
+
+.scedule table{
+    width: 100%;
+    margin-top: 30px;
+    background: #fff;
+    border: 1px solid #004a80;
+    text-align: center;
+    th{
+        width: 14%;
+       border: 1px solid #004a80;
+       padding: 14px;
+    //   color: #999999;
+       font-weight: normal;
+    }
+}
+
+.scedule td{
+    width: 14%;
+    border: 1px solid #004a80;
+    padding: 20px;
+}
+
+.blue{
+    background: #018dfa;
+    color: #fff;
+}
+
+.purple{
+    background: #33ccff;
+    color: #fff;
+}
+
+.emerald{
+    background: #ff4a4a;
+    color: #fff;
+}
+
+.red{
+    background: $mainred;
+    color: #fff;
+}
+
+.dark-blue{
+    background: #004a80;
+    color: #fff;
+}
+
+.scedule span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.scedule-tags{
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    width: 100%;
+    height: 47px;
+    margin-top: 30px;
+}
+
+.scedule-tag{
+    width: 33.3%;
+    text-align: center;
+    padding-top: 14px;
 }

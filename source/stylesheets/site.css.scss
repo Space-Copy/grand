@@ -70,6 +70,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: $maingray;
+  line-height: 1.3em;
 }
 
 a{
@@ -123,7 +124,7 @@ header{
 .main-contacts{
   position: absolute;
   right: 0;
-  top: 45px;
+  top: 28px;
   text-align: right;
   color: #fff;
   font-size: 18px;
@@ -139,6 +140,25 @@ header{
   font-weight: bold;
 }
 
+.vk-link-up{
+    display: inline-block;
+    height: 26px;
+    width: 27px;
+    background: url(../images/insta_icon_shapka.png);
+}
+
+.insta-link-up{
+    display: inline-block;
+    margin-left: 20px;
+    height: 26px;
+    width: 27px;
+    background: url(../images/vk_icon_shapka.png);
+}
+
+.vk-link-up:hover, .insta-link-up:hover{
+    background-position: bottom;
+}
+
 // =========================== Menu
 
 .main-menu{
@@ -146,6 +166,7 @@ header{
 }
 
 .menu{
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   width: 1170px;
@@ -157,8 +178,6 @@ header{
   align-self: stretch;
   border-right: 1px solid #ee3131;
   text-align: center;
-  // max-width: 115px;
-  // min-width: 30px;
 }
 
 .menu .menu-item:not(:first-child) {
@@ -181,7 +200,7 @@ header{
   display: block;
   width: 100%;
   height: 65px;
-  padding-top: 25px;
+  padding-top: 35px;
   color: #fff;
 }
 
@@ -199,16 +218,17 @@ header{
   position: absolute;
   z-index: 999;
   display: none;
+  margin-top: -10px;
   width: 100%;
   text-align: left;
   background: $mainred;
   a {
     display: block;
-    margin: 10px 20px 0 20px;
-    // line-height: 50px;
+    border-top: 1px solid #ee3131;
+    text-align: center;
   }
   a:hover{
-    text-decoration: underline;
+    background: #ee3131;
   }
 }
 
@@ -243,7 +263,7 @@ footer{
 .fifths-footer-column{width: 13%;}
 
 .sixths-footer-column{
-  width: 15%;
+  width: 28%;
   line-height: 1em;
   padding-top: 20px;
   text-align: right;
@@ -313,7 +333,7 @@ footer{
   border-color: $mainred;
 }
 
-.news{
+.index-news{
   height: 290px;
   margin-top: -40px;
   margin-bottom: 25px;
@@ -327,7 +347,7 @@ footer{
   background: #fff;
 }
 
-.news .news-item:nth-child(even) {
+.index-news .news-item:nth-child(even) {
   background: $coldgray;
 }
 
@@ -346,7 +366,8 @@ footer{
 .news-item a{
   font: 900 28px "Amazing Grotesk", sans-serif;
   text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.4em;
+  color: #fff;
 }
 
 .news-item a:after{
@@ -358,10 +379,6 @@ footer{
   text-decoration: underline;
 }
 
-.news-item a:visited{
-  color: #fff;
-}
-
 .news-item h2{
   display: inline-block;
   width: 100%;
@@ -371,12 +388,13 @@ footer{
   text-transform: uppercase;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
+  line-height: 1.3em;
 }
 
 .news-date{
   color: $mainred;
   margin-bottom: 10px;
-  font-family: "Amazing Grotesk";
+  font: 900 12px "Amazing Grotesk", sans-serif;
 }
 
 .month{
@@ -389,6 +407,7 @@ footer{
 }
 
 .index-about{
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   height: 340px;
@@ -425,7 +444,7 @@ footer{
 .hor-line{
   height: 5px;
   width: 175px;
-  margin: 30px 0;
+  margin: 20px 0;
   background: $mainred;
 }
 
@@ -481,6 +500,7 @@ footer{
 }
 
 .sections-container{
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   height: 410px;
@@ -500,11 +520,11 @@ footer{
     font-size: 24px;
     color: $mainblue;
     margin: 10px 0;
+    text-transform: uppercase;
   }
   p {
     position: relative;
     z-index: 2;
-    font-family: "Amazing Grotesk";
   }
   img{
     position: absolute;

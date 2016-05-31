@@ -33,6 +33,8 @@
           <div class="main-contacts">
             <p>Москва, ул. Муромская д. 1 <%= image_tag "locate.png"  %></p>
             <p>+7 495 <span class="main-phone">784 1416</span><%= image_tag "phone.png" %></p>
+            <a href="https://www.instagram.com/sc_grand/" target=blank class="vk-link-up"></a>
+            <a href="https://new.vk.com/public119759887" target=blank class="insta-link-up"></a>
           </div>
         </div>
       </header>
@@ -48,20 +50,33 @@
               <div class="dropdown-content">
                 <%= link_to "тренеры", '/trainers.html' %>
                 <%= link_to "документы", '/documents.html' %>
+                <%= link_to "новости", '/news.html' %>
+              </div>
+            </div>
+            <div class="menu-item dropdown">
+              <a href="#">Наши услуги</a>
+              <div class="dropdown-content">
+                <%= link_to "Художественная гимнастика", '/gymnastics.html' %>
+                <%= link_to "Эстетическая гимнастика", '/aesthetic.html' %>
+                <%= link_to "Постановки", '/direction.html' %>
+                <%= link_to "Стретчинг", '/stretching.html' %>
               </div>
             </div>
             <div class="menu-item">
-              <%= link_to "Художественная гимнастика", '/gymnastics.html' %>
+              <%= link_to "Расписание", '/scedule.html' %>
             </div>
-            <div class="menu-item">
-              <%= link_to "Эстетическая гимнастика", '/aesthetic.html' %>
-            </div>
-            <div class="menu-item">
-              <%= link_to "Постановки", '/direction.html' %>
-            </div>
-            <div class="menu-item">
-              <%= link_to "Стретчинг", '/stretching.html' %>
-            </div>
+            <!--<div class="menu-item">-->
+            <!--  <%= link_to "Художественная гимнастика", '/gymnastics.html' %>-->
+            <!--</div>-->
+            <!--<div class="menu-item">-->
+            <!--  <%= link_to "Эстетическая гимнастика", '/aesthetic.html' %>-->
+            <!--</div>-->
+            <!--<div class="menu-item">-->
+            <!--  <%= link_to "Постановки", '/direction.html' %>-->
+            <!--</div>-->
+            <!--<div class="menu-item">-->
+            <!--  <%= link_to "Стретчинг", '/stretching.html' %>-->
+            <!--</div>-->
             <div class="menu-item">
               <%= link_to "Попечительский совет", '/trustees.html' %>
             </div>
@@ -122,11 +137,11 @@
                 	</div>
                 	<div class="form-item">
               	    <select class="option-list" name="rank">
-              	        <option value="Нет разряда">Нет разряда</option>
-                        <option value="1-й разряд">1-й спортивный разряд</option>
-                        <option value="2-й разряд">2-й спортивный разряд</option>
-                        <option value="3-й разряд">3-й спортивный разряд</option>
-                      </select>
+            	        <option value="Нет разряда">Нет разряда</option>
+                      <option value="1-й разряд">1-й юношеский спортивный разряд</option>
+                      <option value="2-й разряд">2-й юношеский спортивный разряд</option>
+                      <option value="3-й разряд">3-й юношеский спортивный разряд</option>
+                    </select>
                 	</div>
                 </div>
                 <div class="form-row">
@@ -189,7 +204,7 @@
               <%= link_to "эстетическая гимнастика", '/aesthetic.html' %>
             </li>
             <li>
-              <%= link_to "попечительский совет", '/council.html' %>
+              <%= link_to "попечительский совет", '/trustees.html' %>
             </li>
           </ul>
         </div>
@@ -199,10 +214,10 @@
               <%= link_to "новости", '/news.html' %>
             </li>
             <li>
-              <%= link_to "постановки", '/productions.html' %>
+              <%= link_to "постановки", '/direction.html' %>
             </li>
             <li>
-              <%= link_to "стретчинг", '#' %>
+              <%= link_to "стретчинг", 'stretching.html' %>
             </li>
           </ul>
         </div>
@@ -211,13 +226,9 @@
             <li>
               <%= link_to "тренеры", '/trainers.html' %>
             </li>
-            <li>
-              <%= link_to "фотогалерея", '/gallery.html' %>
-            </li>
-          </ul>
-        </div>
-        <div class="fifths-footer-column">
-          <ul class="footer-menu">
+            <!--<li>-->
+            <!--  <%= link_to "фотогалерея", '/gallery.html' %>-->
+            <!--</li>-->
             <li>
               <%= link_to "контакты", '/contacts.html' %>
             </li>
@@ -226,6 +237,16 @@
             </li>
           </ul>
         </div>
+        <!--<div class="fifths-footer-column">-->
+        <!--  <ul class="footer-menu">-->
+        <!--    <li>-->
+        <!--      <%= link_to "контакты", '/contacts.html' %>-->
+        <!--    </li>-->
+        <!--    <li>-->
+        <!--      <%= link_to "о нас", '/about.html' %>-->
+        <!--    </li>-->
+        <!--  </ul>-->
+        <!--</div>-->
         <div class="sixths-footer-column">
           <p>+7 495 <span class="main-phone">784 1416</span></p>
           <p class="gravpix">by <%= link_to "Gravpix", 'http://gravpix.net/', target: "_blank" %></p>

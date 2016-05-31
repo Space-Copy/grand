@@ -24,6 +24,7 @@ jQuery(document).ready(function($){
 	//и в зависимости от ответа
 	//выводит информацию о статусе отправки письма
 	$(".reg-form").submit(function() {
+		console.log("sup");
 		var str = $(this).serialize();
 		$.ajax({
 			type: "POST",

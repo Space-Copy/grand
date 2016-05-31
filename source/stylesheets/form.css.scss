@@ -115,8 +115,9 @@ $coldgray: #edf6fe;
 }
 
 .form-row{
-    display: -webkit-flex;
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     width: 100%;
     margin-bottom: 20px;
 }
