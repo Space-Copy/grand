@@ -25,7 +25,7 @@ else {
 		$fromName = 'sc-grand';
 
 		// Сюда введите Ваш email
-		$emailTo = 'risempai@gmail.com';
+		$emailTo = 'be.space.copy@gmail.com';
 
 		$subject = 'Форма обратной связи';
 		$subject = '=?utf-8?b?'. base64_encode($subject) .'?=';

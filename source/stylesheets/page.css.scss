@@ -30,6 +30,8 @@ $coldgray: #edf6fe;
 }
 
 .standart-page-item{
+    display: -webkit-box; 
+    display: -moz-box; 
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -81,7 +83,7 @@ $coldgray: #edf6fe;
     width: 600px;
     padding: 30px 40px;
     h3{
-        font-size: 30px;
+        font-size: 28px;
         margin-bottom: 15px;
         line-height: 1.2em;
     }
@@ -128,26 +130,32 @@ $coldgray: #edf6fe;
 .standart-page-content{
     background: #fff;
     padding: 45px 45px 65px 45px;
-    font-size: 18px;
-    
-    h1{
+    p{
+        line-height: 1.3em;
+        font-size: 16px
+        
+    }
+}
+
+.standart-page-content h1{
         font: normal 30px 'Open Sans';
         color: $mainred;
         margin-bottom: 15px;
-        line-height: 1em;
     }
     
-    ul{
+.standart-page-content ul{
         margin-left: 20px;
         li{
             margin-bottom: 10px;
+            font-size: 16px
         }
     }
-}
 
 // contacts
 
 .contact-page{
+    display: -webkit-box; 
+    display: -moz-box; 
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -281,6 +289,8 @@ $coldgray: #edf6fe;
 // попечительский совет
 
 .trustee{
+    display: -webkit-box; 
+    display: -moz-box; 
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -333,6 +343,8 @@ $coldgray: #edf6fe;
 // тренеры
 
 .coach{
+    display: -webkit-box; 
+    display: -moz-box; 
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -377,6 +389,7 @@ $coldgray: #edf6fe;
     padding: 40px;
     background: #fff;
     font-size: 20px;
+    line-height: 1.3em;
     h1{
         font: normal 30px 'Open Sans';
         margin-bottom: 10px;
@@ -403,6 +416,8 @@ $coldgray: #edf6fe;
 // новости
 
 .news-page-item{
+    display: -webkit-box; 
+    display: -moz-box; 
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -552,6 +567,8 @@ $coldgray: #edf6fe;
 }
 
 .scedule-tags{
+    display: -webkit-box; 
+    display: -moz-box; 
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -564,4 +581,32 @@ $coldgray: #edf6fe;
     width: 33.3%;
     text-align: center;
     padding-top: 14px;
+}
+
+// =========================== gallery
+
+.gallery-album{
+    display: -webkit-box; 
+    display: -moz-box; 
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    margin-top: 30px;
+}
+
+.gallery-img-holder{
+    width: 270px;
+    margin-right: 30px;
+    background: #fff;
+    text-align: center;
+    h1{
+        padding: 15px 0;
+        font: normal 18px 'Open Sans';
+        color: $darkgray;
+    }
+    h2{
+        padding-bottom: 15px;
+        font: normal 14px 'Open Sans';
+        color: $darkgray;
+    }
 }
