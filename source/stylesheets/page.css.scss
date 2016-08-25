@@ -282,6 +282,9 @@ $coldgray: #edf6fe;
         margin: 10px 0;
     }
 }
+ .location :first-child{
+    padding: -100px;
+ }
 
 // maps
 
@@ -319,7 +322,7 @@ $coldgray: #edf6fe;
     -webkit-box-flex: 1 auto;
     -webkit-flex: 1 auto;
     flex: 1 auto;
-    padding: 40px 70px;
+    padding: 40px 70px 35px;
     background: #fff;
     h1{
         font: normal 30px 'Open Sans';
@@ -340,6 +343,74 @@ $coldgray: #edf6fe;
     font-size: 16px;
 }
 
+// какая ересь сейчас будет мамочки
+
+
+.ac-container label{
+    margin-top: 35px;
+    padding: 5px 15px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    color: $darkgray; /*цвет заголовка*/
+    line-height: 33px;
+    font-size: 18px;
+    background: #e8edf2; /*цвет полоски в покое*/
+}
+
+.ac-container label:hover{
+    color: $mainblue;;
+    background: #e8edf2; /*цвет полоски при наведении*/
+}
+
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+    background: #0057be; /*цвет полоски раскрытого*/
+    color: #ffffff; /*цвет заголовка*/
+    margin-bottom: 32px;
+}
+
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+    background: transparent url(../images/arrow_down.png) no-repeat center center;  
+}
+
+.ac-container input:checked + label:hover:after{
+    background-image: url(../images/arrow_up.png);
+}
+
+.ac-container input{
+    display: none;
+}
+
+.ac-container article{
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+}
+
+.ac-container input:checked ~ article.ac-small{
+    height: 70px;
+}
+.ac-container input:checked ~ article.ac-medium{
+    height: 180px;
+}
+.ac-container input:checked ~ article.ac-large{
+    height: 230px;
+}
+
+
+
 // тренеры
 
 .coach{
@@ -352,22 +423,23 @@ $coldgray: #edf6fe;
 }
 
 .coach-img-holder{
-    width: 370px;
+    width: 270px;
     margin-right: 30px;
     h1{
         display: inline-block;
-        width: 300px;
-        margin-top: 20px;
+        width: 200px;
+        margin-top: 5px;
         background: $mainblue;
-        padding: 15px 35px;
+        padding: 10px 35px;
         text-align: center;
-        font-size: 20px;
+        font-size: 18px;
         color: #fff;
         text-transform: uppercase;
+        line-height: 1.3em;
     }
     img{
         border-radius: 50%;
-        width: 370px;
+        width: 270px;
     }
 }
 
@@ -441,7 +513,7 @@ $coldgray: #edf6fe;
 
 .news-data-holder{
         color: #ffffff;
-        font: bold 14px 'Open Sans';
+        font: bold 11px 'Open Sans';
         margin-top: 15px;
         text-transform: uppercase;
         padding: 0 10px;
@@ -595,18 +667,43 @@ $coldgray: #edf6fe;
 }
 
 .gallery-img-holder{
-    width: 270px;
     margin-right: 30px;
     background: #fff;
     text-align: center;
+    img{
+        width: 270px;
+    }
     h1{
-        padding: 15px 0;
+        padding: 15px;
         font: normal 18px 'Open Sans';
         color: $darkgray;
     }
     h2{
-        padding-bottom: 15px;
+
         font: normal 14px 'Open Sans';
         color: $darkgray;
+        padding-bottom: 15px;
     }
+}
+
+.button-back{
+  display: block;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  line-height: 45px;
+  padding: 0 35px;
+  background: $mainblue;
+  color: #fff;
+  text-align: center;
+}
+
+.button-back:hover{
+background: #0057be;
+}
+
+.album_none{
+    background: $coldgray;
+    width: 690px;
+
 }
