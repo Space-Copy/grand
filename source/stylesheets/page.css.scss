@@ -22,12 +22,23 @@ $coldgray: #edf6fe;
 
 .unnamed{
     padding: 25px;
+    margin-top: 30px;
     background: $mainblue;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
+    a{
+    text-decoration: underline;
+    color: #ffffff;
+    }
 }
+
+.unnamed-two{
+    margin-bottom: 25px;
+    width: 1170px;
+}
+
 
 .standart-page-item{
     display: -webkit-box; 
@@ -262,15 +273,16 @@ $coldgray: #edf6fe;
 
 .location-first-col{
     float: right;
+    margin-bottom: 30px;
 }
 
 .location-second-col{
-    
+    margin-bottom: 30px;
 }
 
 .location{
     width: 460px;
-    margin-bottom: 30px;
+    height: 200px;
     padding: 55px;
     background: #fff;
     
@@ -587,58 +599,33 @@ $coldgray: #edf6fe;
 
 // расписание
 
-.scedule table{
+.scedule-page table{
     width: 100%;
-    margin-top: 30px;
     background: #fff;
     border: 1px solid #004a80;
     text-align: center;
     th{
         width: 14%;
-       border: 1px solid #004a80;
-       padding: 14px;
-    //   color: #999999;
-       font-weight: normal;
+        border: 1px solid #004a80;
+        padding: 15px;
+        font-weight: normal;
     }
 }
 
-.scedule td{
+.scedule-page td{
     width: 14%;
     border: 1px solid #004a80;
-    padding: 20px;
+    padding: 10px;
 }
 
-.blue{
-    background: #018dfa;
-    color: #fff;
-}
-
-.purple{
-    background: #33ccff;
-    color: #fff;
-}
-
-.emerald{
-    background: #ff4a4a;
-    color: #fff;
-}
-
-.red{
-    background: $mainred;
-    color: #fff;
-}
-
-.dark-blue{
-    background: #004a80;
-    color: #fff;
-}
-
-.scedule span{
-    font-size: 18px;
-    font-weight: bold;
+.scedule-page span{
+    font-size: 16px;
+    font-weight: bold; 
 }
 
 .scedule-tags{
+    border: 1px solid #004a80;
+    background: #fff;
     display: -webkit-box; 
     display: -moz-box; 
     display: flex;
@@ -655,12 +642,75 @@ $coldgray: #edf6fe;
     padding-top: 14px;
 }
 
+.blue{
+    background: #018dfa;
+    color: #fff;
+}
+
+.red{
+    background: $mainred;
+    color: #fff;
+}
+
+.dark-blue{
+    background: #004a80;
+    color: #fff;
+}
+
+.green-hore{
+   background: #b3ffcc; 
+
+}
+
+.green{
+   background: #e6ffe6; 
+
+}
+
+.wave{
+    background: #b3ecff;
+   
+}
+
+.purple{
+    background: #e6e6ff;
+   
+}
+
+.yelow{
+    background: #ffffe6;
+}
+
+.slate-gray{
+    background: #d1e0e0;
+}
+
+.light-pink{
+    background: #ffe6ff;
+}
+
+.pink{
+    background: #ffcce0;
+}
+
+.redis{
+    background: #ff9999;
+}
+
+.blue-two{
+    background: #b3c6ff;
+}
+
+.orange{
+    background: #ffebcc;
+}
+
 // =========================== gallery
 
 .gallery-album{
+    display: flex;
     display: -webkit-box; 
     display: -moz-box; 
-    display: flex;
     display: -ms-flexbox;
     display: -webkit-flex;
     margin-top: 30px;
